@@ -1,0 +1,11 @@
+=/= instalar os packages da aplicação
+yarn add prisma ts-node-dev typescript @types/express -d
+npm install -g tsc
+
+
+=/= rodar servidor
+yarn prisma init
+
+
+=/= prima iniciar o banco
+yarn prisma migrate dev
