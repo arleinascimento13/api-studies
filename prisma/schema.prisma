@@ -14,14 +14,43 @@ model User {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
+  movie_rent MovieRent[] @relation("user")
+
   @@map("users") // Renomeia como o Prisma vai renomear a tabela no banco
 }
 
-model Movies{
+model Movie {
   id String @id @default(uuid())
   title String @unique
   duration Int
   release_date DateTime
 
+  movie_rent MovieRent[] @relation("movies")
+
   @@map("movies")
+}
+
+model MovieRent{
+  user User @relation("user", fields: [userID], references: [id])
+
+  // este dado ele não vai para o banco de dados,
+  // é apenas para o prisma entender qual o tipo de
+  // relacionamento que existe entre o Id do Usuário
+  // com o propio usuario
+
+  userID String
+
+  movie Movie @relation("movies", fields: [movieId], references: [id])
+
+  movieId String
+
+  // como é apenas para relacionar coisas
+  // não é necessário criar um novo ID
+  
+  @@id([userID, movieId])
+
+  // com este codigo, o prisma entende que o
+  // id dessa categoria, vai ser a junção do userID
+  // e do movieId (caso seja necessário buscar no DB)
+
 }

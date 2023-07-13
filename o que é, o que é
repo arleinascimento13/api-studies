@@ -1,0 +1,7 @@
+=/= 
+
+o migrate serve para transcrever os esquemas criados dentro do prisma
+convertendo-os em sql
+
+o prisma schema é onde ficam todas as tabelas de relação, onde
+serão montados todos os modelos, geradores e fontes de data
