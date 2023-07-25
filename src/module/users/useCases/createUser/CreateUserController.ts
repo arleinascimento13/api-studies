@@ -4,13 +4,13 @@ import { Response } from "express";
 import { CreateUserUseCase } from "./createUserUseCases";
 
 export class CreateUserController {
-     async handle(req: Request, res: Response){
-          const { name,email } = req.body
+  async handle(req: Request, res: Response) {
+    const { name, email } = req.body;
 
-          const CreateUserUseCase = new CreateUserUseCase()
+    const createUserUseCase = new CreateUserUseCase();
 
-          const result = await CreateUserUseCase.execute( { name, email } )
+    const result = await createUserUseCase.execute({ name, email });
 
-          return res.status(201).json(result)
-     }
+    return res.status(201).json(result);
+  }
 }

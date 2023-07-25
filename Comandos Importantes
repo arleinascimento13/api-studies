@@ -1,5 +1,5 @@
 =/= instalar os packages da aplicação
-yarn add prisma ts-node-dev typescript @types/express -d
+yarn add prisma ts-node-dev typescript @types/express express-async-errors -d
 npm install -g tsc
 
 
