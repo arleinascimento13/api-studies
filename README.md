@@ -23,6 +23,8 @@ Para começar a utilizar este projeto, siga os passos abaixo:
      npm install
 
 3. **Acesse a API**:
+   ```bash
+      npm run dev
 A API estará disponível em http://localhost:3000 por padrão. Você pode usar ferramentas como o Postman ou o curl para testar os endpoints.
 
 **Contribuição**
