@@ -16,8 +16,8 @@ Para começar a utilizar este projeto, siga os passos abaixo:
 1. **Clone o Repositório**:
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
+   git clone https://github.com/arleinascimento13/api-studies
+   cd api-studies
 2. **Instale as Dependências**:
    ```bash
      npm install
